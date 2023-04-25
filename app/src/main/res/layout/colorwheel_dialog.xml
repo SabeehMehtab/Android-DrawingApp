@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Current"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/Current"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="20dp"
+            android:padding="5dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:padding="5dp"
+            />
+        <TextView
+            android:id="@+id/New"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        >
+
+        <com.github.antonpopoff.colorwheel.ColorWheel
+            android:id="@+id/colorwheel"
+            android:layout_width="wrap_content"
+            android:layout_height="350dp"
+            android:layout_marginStart="5dp"
+            android:layout_weight="9"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp" />
+
+        <com.github.antonpopoff.colorwheel.gradientseekbar.GradientSeekBar
+            android:id="@+id/gradientVbar"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            app:gsb_offset="0.5"
+            app:gsb_barCornersRadius="20dp"
+            app:tb_thumbStrokeColor="@color/black"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_margin="5dp"
+        >
+        <com.github.antonpopoff.colorwheel.gradientseekbar.GradientSeekBar
+            android:id="@+id/gradientHbar"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="18"
+            android:rotation="180"
+            app:gsb_orientation="horizontal"
+            app:gsb_offset="0.5"
+            app:gsb_barCornersRadius="20dp"
+            app:tb_thumbStrokeColor="@color/white"
+            />
+        <Button
+            android:id="@+id/ok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_marginStart="5dp"
+            android:backgroundTint="@color/teal_700"
+            android:text="OK"
+            android:padding="0dp"
+            android:textSize="15sp"
+            />
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

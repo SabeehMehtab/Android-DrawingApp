@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/brushCircle"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:padding="5dp"
+        android:src="@drawable/large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/brushLarge"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <ImageButton
+        android:id="@+id/brushSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/small"
+        app:layout_constraintStart_toStartOf="@id/brushLarge"
+        app:layout_constraintEnd_toEndOf="@id/brushLarge"
+        app:layout_constraintTop_toTopOf="@id/brushCircle" />
+
+    <ImageButton
+        android:id="@+id/brushMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/medium"
+        app:layout_constraintStart_toStartOf="@id/brushLarge"
+        app:layout_constraintEnd_toEndOf="@id/brushLarge"
+        app:layout_constraintTop_toBottomOf="@id/brushSmall"
+        app:layout_constraintBottom_toTopOf="@+id/brushLarge" />
+
+    <ImageButton
+        android:id="@+id/brushLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/large"
+        app:layout_constraintStart_toEndOf="@id/brushCircle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/brushCircle"
+        app:layout_constraintHorizontal_bias="1" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/slider"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="12dp"
+        android:value="1.0"
+        android:valueFrom="1.0"
+        android:valueTo="35.0"
+        app:thumbColor="@color/slider_color"
+        app:thumbRadius="10sp"
+        app:trackColor="@color/black"
+        app:trackHeight="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/sizeOK"
+        app:layout_constraintTop_toBottomOf="@id/brushCircle"
+        app:layout_constraintBottom_toBottomOf="@id/sizeOK" />
+
+    <Button
+        android:id="@+id/sizeOK"
+        android:layout_width="45dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/teal_700"
+        android:text="OK"
+        android:padding="0dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/slider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/slider" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

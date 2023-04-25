@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="6dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Enter Name For Drawing"
+        android:textSize="18sp"
+        android:textColor="@color/snackbar_bg"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_filename"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_FileName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="File Name"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="#0A72AA"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/saveAction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Save"
+            android:textSize="15sp"
+            android:textColor="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>
